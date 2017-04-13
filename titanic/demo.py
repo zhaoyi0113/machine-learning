@@ -47,5 +47,3 @@ X_train, X_test, y_train, y_test = cross_validation.train_test_split(X,y,test_si
 clf_dt = tree.DecisionTreeClassifier(max_depth=10)
 clf_dt.fit (X_train, y_train)
 print(clf_dt.score (X_test, y_test))
-
-
