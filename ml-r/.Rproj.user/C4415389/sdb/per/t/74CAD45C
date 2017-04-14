@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "my_data <- read_excel(\"./data/assignment-02-data1.xlsx\")\n\n# Q1 Read the data into R\ninstall.packages(\"readxl\")\nlibrary(readxl)\nstr(my_data)\n\n# Q2 Using ggplot2 to show fro each kind of coral and for each site how the bleaching\n# varies from year to year\n# facet showing the bleaching for one kind of coral at one site across the time period\n# The sites should be ordered by latitude\n# Fit smoothers to the data\ninstall.packages(\"ggplot2\")\nlibrary(ggplot2)\n\ncoral <- ggplot(my_data, aes(x = year, y = bleaching)) + geom_jitter()\ncoral <- coral + facet_grid(latitude + site ~ kind) +  stat_smooth(method = \"lm\", se = FALSE, col = \"red\") \ncoral\n\n# Q3 Using shiny to create an interactive visualisation.\n# Allowing the user to vary the kind of coral display and the choice of smoother\n# Read data from xlsx dataset\ninstall.packages(\"readxl\")\nlibrary(read)\n#my_data = read_excel(\"/Users/zhengxiao/Documents/TextBooks/2017-S1/FIT5147-Data_exploration_and_visualisation/Assignment/Assignment-03/assignment-02-data.xlsx\")\n\n#install.packages(\"ggplot2\")\nlibrary(ggplot)\ninstall.packages(\"shiny\")\nlibrary(shiny)\n\n\n# Q4\ninstall.packages(\"leaflet\")\nlibrary(leaflet)\n\nlibrary(ggmap)\nhead(my_data)\nmean(my_data$longitude)\nmean(my_data$latitude)\ncorvallis <- c(lon = mean(my_data$longitude), lat = mean(my_data$latitude))\ncorvallis_map <- get_map(corvallis, zoom = 5, scale = 1)\nggmap(corvallis_map) + geom_point(aes(longitude, latitude), data=my_data)\n\nleaflet(data = my_data) %>% addTiles() %>% \n  addMarkers(~longitude, ~latitude, popup = ~as.character((site)))\n\n",
+    "created" : 1492163066821.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1633111947",
+    "id" : "74CAD45C",
+    "lastKnownWriteTime" : 1492165702,
+    "last_content_update" : 1492165702,
+    "path" : "~/dev/ml/ml-r/map.r",
+    "project_path" : "map.r",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

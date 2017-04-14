@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#!/usr/bin/env Rscript\nlibrary(ggplot2)\nlibrary(ggmap)\n\nhouse <- read.csv(file=\"./data/Rgraphics/dataSets/landdata-states.csv\",head=TRUE,sep=\",\")\n\nhead(house)\nnrow(house)\n\ndata <- read.csv(file=\"./data/assignment-02-data.csv\")\nggplot(house, aes(Home.Value, Land.Value)) + geom_point()\n\n\n#Sys.sleep(3)\nhead(data)\nggplot(data, aes(longitude, longitude, col=site)) + geom_point()\n\nnyc <- c(lon = -123.2620, lat = 44.5646)\nnyc_map <- get_map(location=nyc, zoom=10, scale=1)\nggmap(nyc_map)\n\ncorvallis <- c(lon = -143.515, lat = -11.5646)\n\n# Get map at zoom level 5: map_5\nmap_5 <- get_map(corvallis, zoom = 5, scale = 1)\n\n# Plot map at zoom level 5\nggmap(map_5)\n\n# Get map at zoom level 13: corvallis_map\ncorvallis_map <- get_map(corvallis, zoom = 13, scale = 1)\n\n# Plot map at zoom level 13\nggmap(corvallis_map) + geom_point(aes(longitude, longitude), data=data)\n\n",
+    "created" : 1492143764795.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3269918476",
+    "id" : "8DC8A03C",
+    "lastKnownWriteTime" : 1492163347,
+    "last_content_update" : 1492163347515,
+    "path" : "~/dev/ml/ml-r/tutorial.r",
+    "project_path" : "tutorial.r",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
