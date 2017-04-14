@@ -44,4 +44,3 @@ ggmap(corvallis_map) + geom_point(aes(longitude, latitude), data=my_data)
 
 leaflet(data = my_data) %>% addTiles() %>% 
   addMarkers(~longitude, ~latitude, popup = ~as.character((site)))
-
