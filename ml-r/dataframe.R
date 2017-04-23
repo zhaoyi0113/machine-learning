@@ -14,3 +14,5 @@ employ['Dep'] <- c('1','1','1')
 head(employ)
 # print total salary for each department
 group_by(employ, Dep) %>% summarise(salary = max(salary))
+str(employ)
+glimpse(employ)
