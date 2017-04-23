@@ -1,4 +1,4 @@
 # Summary
 
-* [R]
+* R
     * [Cleaning Data](ml-r/CLEAN-DATA.md)
