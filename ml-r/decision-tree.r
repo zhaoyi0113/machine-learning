@@ -1,8 +1,18 @@
-install.packages("RGtk2")
-install.packages('rattle')
-install.packages('rpart.plot')
-install.packages('RColorBrewer')
+if(!require('RGtk2')){
+    install.packages("RGtk2")
+}
+if(!require('rattle')){
+    install.packages('rattle')
+}
+if(!require('rpart.plot')){
+    install.packages('rpart.plot')
 
+}
+if(!require('RColorBrewer')){
+    install.packages('RColorBrewer')
+}
+library(RGtk2)
+library(rattle)
 library(rpart)
 library(rpart.plot)
 library(RColorBrewer)

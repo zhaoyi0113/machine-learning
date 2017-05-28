@@ -9,26 +9,130 @@
         margin: 1px;
         color: white;
     }
+
+    .svg-chart rect {
+        fill: steelblue;
+    }
+    
+    .svg-chart text {
+        fill: white;
+        font: 10px sans-serif;
+        text-anchor: end;
+    }
+
+    .vertical-chart rect {
+        fill: steelblue;
+    }
+
+    .vertical-chart text {
+        fill: white;
+        font: 10px sans-serif;
+        text-anchor: end;
+    }
 </style>
-<div class="chart"></div>
+<div>
+    <h2>Chart</h2>
+    <div class="chart"></div>
+    <h2>SVG Chart</h2>
+    <svg class="svg-chart"></svg>
+    <h2>Vertical Chart</h2>
+    <svg class='vertical-chart'></svg>
+</div>
 <!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
 <script src="node_modules/d3/build/d3.min.js"></script>
 <script>
-    var data = [4, 8, 15, 16, 23, 42];
+    function drawChart() {
+        var data = [4, 8, 15, 16, 23, 42];
 
-    var x = d3.scaleLinear()
-        .domain([0, d3.max(data)])
-        .range([0, 420]);
+        var x = d3.scaleLinear()
+            .domain([0, d3.max(data)])
+            .range([0, 420]);
 
-    d3.select(".chart")
-        .selectAll("div")
-        .data(data)
-        .enter().append("div")
-        .style("width", function (d) { 
-            var i = x(d);
-            console.log(d + ' => ', i);
-            return i + "px"; 
-        })
-        .text(function (d) { return d; });
+        d3.select(".chart")
+            .selectAll("div")
+            .data(data)
+            .enter().append("div")
+            .style("width", function (d) {
+                var i = x(d);
+                console.log(d + ' => ', i);
+                return i + "px";
+            })
+            .text(function (d) { return d; });
+    }
+
+    function drawSVGChart() {
+        var data = [
+            { name: "Locke", value: 4 },
+            { name: "Reyes", value: 8 },
+            { name: "Ford", value: 15 },
+            { name: "Jarrah", value: 16 },
+            { name: "Shephard", value: 23 },
+            { name: "Kwon", value: 42 }
+        ];
+        var width = 420,
+            barHeight = 20;
+
+        var x = d3.scaleLinear()
+            .domain([0, d3.max(data)])
+            .range([0, width]);
+
+        var chart = d3.select(".svg-chart")
+            .attr("width", width);
+
+        x.domain([0, d3.max(data, function (d) { return d.value; })]);
+
+        chart.attr("height", barHeight * data.length);
+
+        var bar = chart.selectAll("g")
+            .data(data)
+            .enter().append("g")
+            .attr("transform", function (d, i) { return "translate(0," + i * barHeight + ")"; });
+
+        bar.append("rect")
+            .attr("width", function (d) { return x(d.value); })
+            .attr("height", barHeight - 1);
+
+        bar.append("text")
+            .attr("x", function (d) { return x(d.value) - 3; })
+            .attr("y", barHeight / 2)
+            .attr("dy", ".35em")
+            .text(function (d) { return d.value; });
+
+    }
+
+    function drawVerticalChart() {
+        var data = [4, 8, 15, 16, 23, 42];
+        var width = 960,
+            height = 500;
+
+        var y = d3.scaleLinear()
+            .range([height, 0]);
+
+        var chart = d3.select(".vertical-chart")
+            .attr("width", width)
+            .attr('height', height);
+        y.domain([0, d3.max(data, function (d) { return d; })]);
+
+        var barWidth = width / data.length;
+        var bar = chart.selectAll("g")
+            .data(data)
+            .enter().append("g")
+            .attr("transform", function (d, i) { return "translate(" + i * barWidth + ",0)"; });
+
+        bar.append("rect")
+            .attr('y', function (d) { return y(d); })
+            .attr("width", barWidth - 1)
+            .attr("height", function (d) { console.log(d + '=>' + y(d)); return height - y(d); });
+
+        bar.append('text')
+            .attr("x", barWidth / 2)
+            .attr("y", function (d) { return y(d) + 3; })
+            .attr("dy", ".75em")
+            .text(function (d) { return d; });
+
+    }
+    drawChart();
+    drawSVGChart();
+    drawVerticalChart();
 
 </script>
