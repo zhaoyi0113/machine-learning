@@ -2,8 +2,7 @@
 library(rpart)
 
 # grow tree 
-fit <- rpart(Kyphosis ~ Age + Number + Start,
-             method="class", data=kyphosis)
+fit <- rpart(Kyphosis ~ Age + Number + Start, method="class", data=kyphosis)
 
 printcp(fit) # display the results 
 plotcp(fit) # visualize cross-validation results 

@@ -4,6 +4,8 @@ Decision tree is a machine learning algorithm used to classify data into categor
 
 ## Classification tree 
 
+Below example creates a decision tree on `Kyphosis` from `Age, Number, Start` columns. 
+
 ```
 # Classification Tree with rpart
 library(rpart)
