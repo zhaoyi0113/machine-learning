@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3302bd4-08a1-46e0-9881-2945f986ea8a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.Rprofile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ml-r/.Rprofile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ml-r/.RData" afterPath="$PROJECT_DIR$/ml-r/.RData" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ml-r/Rplots.pdf" afterPath="$PROJECT_DIR$/ml-r/Rplots.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ml-r/.Rhistory" afterPath="$PROJECT_DIR$/ml-r/.Rhistory" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ml-r/.Rproj.user/C4415389/pcs/files-pane.pper" afterPath="$PROJECT_DIR$/ml-r/.Rproj.user/C4415389/pcs/files-pane.pper" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ml-r/.Rproj.user/C4415389/pcs/source-pane.pper" afterPath="$PROJECT_DIR$/ml-r/.Rproj.user/C4415389/pcs/source-pane.pper" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ml-r/.Rproj.user/C4415389/pcs/windowlayoutstate.pper" afterPath="$PROJECT_DIR$/ml-r/.Rproj.user/C4415389/pcs/windowlayoutstate.pper" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ml-r/.Rproj.user/C4415389/pcs/workbench-pane.pper" afterPath="$PROJECT_DIR$/ml-r/.Rproj.user/C4415389/pcs/workbench-pane.pper" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ml-r/.Rproj.user/C4415389/sdb/prop/INDEX" afterPath="$PROJECT_DIR$/ml-r/.Rproj.user/C4415389/sdb/prop/INDEX" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ml.iml" afterPath="$PROJECT_DIR$/.idea/ml.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ml-r/.Rproj.user/C4415389/session-persistent-state" afterPath="$PROJECT_DIR$/ml-r/.Rproj.user/C4415389/session-persistent-state" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ml-r/decision-tree.r" afterPath="$PROJECT_DIR$/ml-r/decision-tree.r" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ml-r/titanic.R" afterPath="$PROJECT_DIR$/ml-r/titanic.R" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistualize/d3/index.html" afterPath="$PROJECT_DIR$/vistualize/d3/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,19 +29,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CLEAN-DATA.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ml-r/CLEAN-DATA.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="dataframe.R" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ml-r/dataframe.R">
           <provider selected="true" editor-type-id="text-editor">
@@ -62,8 +42,8 @@
       <file leaf-file-name="decision-tree.r" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ml-r/decision-tree.r">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            <state relative-caret-position="338">
+              <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -126,9 +106,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -742,15 +722,17 @@
       <updated>1495961997511</updated>
       <workItem from="1495961999232" duration="771000" />
       <workItem from="1495963064375" duration="861000" />
+      <workItem from="1496394545887" duration="402000" />
+      <workItem from="1496399289397" duration="4000" />
+      <workItem from="1496450995900" duration="439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1632000" />
+    <option name="totallyTimeSpent" value="2477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="977" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -770,10 +752,10 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25239617" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2603834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -798,23 +780,70 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ml-r/tidy.R">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml-r/dataframe.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml-r/decision-tree.r">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="71" lean-forward="false" selection-start-line="4" selection-start-column="71" selection-end-line="4" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml-r/tidy.R">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ml-r/CLEAN-DATA.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/ml-r/CLEAN-DATA.md" />
+    <entry file="file://$PROJECT_DIR$/ml-r/dataframe.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ml-r/.Rprofile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml-r/decision-tree.r">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml-r/tidy.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml-r/CLEAN-DATA.md" />
     <entry file="file://$PROJECT_DIR$/ml-r/dataframe.R">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -839,22 +868,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ml-r/tidy.R">
+    <entry file="file://$PROJECT_DIR$/ml-r/CLEAN-DATA.md" />
+    <entry file="file://$PROJECT_DIR$/.Rhistory">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ml-r/CLEAN-DATA.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/.Rprofile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -874,17 +899,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.Rprofile">
+    <entry file="file://$PROJECT_DIR$/ml-r/tidy.R">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ml-r/decision-tree.r">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        <state relative-caret-position="338">
+          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
           <folding />
         </state>
       </provider>

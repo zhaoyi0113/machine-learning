@@ -1,16 +1,20 @@
-if(!require('RGtk2')){
-    install.packages("RGtk2")
+if(!require("RGtk2")){
+  install.packages("RGtk2", repos="http://cran.us.r-project.org")
 }
-if(!require('rattle')){
-    install.packages('rattle')
+#
+if(!require("rattle")){
+  install.packages('rattle', repos="http://cran.us.r-project.org")
 }
-if(!require('rpart.plot')){
-    install.packages('rpart.plot')
+#
+if(!require("rpart.plot")){
+  install.packages('rpart.plot', repos="http://cran.us.r-project.org")
+}
+#
+if(!require("RColorBrewer")){
+  install.packages('RColorBrewer', repos="http://cran.us.r-project.org")
+}
+#
 
-}
-if(!require('RColorBrewer')){
-    install.packages('RColorBrewer')
-}
 library(RGtk2)
 library(rattle)
 library(rpart)
@@ -27,13 +31,19 @@ str(data)
 prop.table(table(data$Survived))
 
 table(data$Survived)
-prop.table(table(data$Survived),1)
+prop.table(table(data$Survived), 1)
 
 table(data$Sex, data$Survived)
-prop.table(table(data$Sex, data$Survived),1)
+prop.table(table(data$Sex, data$Survived), 1)
 
-fit <- rpart(Survived ~ Pclass + Sex + Age + SibSp + Parch + Fare + Embarked,
-             data=data,
-             method="class")
+fit <- rpart(Survived ~ Pclass +
+    Sex +
+    Age +
+    SibSp +
+    Parch +
+    Fare +
+    Embarked,
+data = data,
+method = "class")
 
 fancyRpartPlot(fit)
