@@ -7,6 +7,7 @@ library(rpart.plot)
 library(RColorBrewer)
 
 train <- read.csv(file="../titanic/data/train.csv",head=TRUE,sep=",")
+test <- read.csv(file="../titanic/data/test.csv",head=TRUE,sep=",")
 
 # 1.
 
@@ -68,7 +69,7 @@ submit <- data.frame(PassengerId = test$PassengerId, Survived = test$Survived)
 write.csv(submit, file = "/tmp/genderclassmodel.csv", row.names = FALSE)
 
 
-#3.
+#3.th
 # Recreate the gender model
 fit <- rpart(Survived ~ Sex, data=train, method="class")
 fancyRpartPlot(fit)
