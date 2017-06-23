@@ -40,4 +40,16 @@ flights[origin == "JFK" & month == 6L, .N]
 # Select both arr_delay and dep_delay columns the data.frame way.
 flights[, c("arr_delay", "dep_delay"), with = FALSE]
 
+# How can we get the number of trips corresponding to each origin airport?
+flights[, .(.N), by = .(origin)]
+# or equivalently using a character vector in 'by'
+flights[, .(.N), by = "origin"]
 
+# How can we calculate the number of trips for each origin airport for carrier code “AA”?
+flights[carrier == "AA", .N, by = origin]
+
+# How can we get the total number of trips for each origin, dest pair for carrier code “AA”?
+flights[carrier == "AA", .N, by = .(origin,dest)]
+
+# How can we get the average arrival and departure delay for each orig,dest pair for each month for carrier code “AA”?
+flights[carrier == "AA", .(mean(arr_delay), mean(dep_delay)), by = .(origin, dest, month)]
