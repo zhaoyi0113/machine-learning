@@ -129,10 +129,7 @@ plotDen <- function(data_in, i){
   p <- ggplot(data= data) + geom_line(aes(x = x), stat = 'density', size = 1,alpha = 1.0) +
     xlab(paste0((colnames(data_in)[i]), '\n', 'Skewness: ',round(skewness(data_in[[i]], na.rm = TRUE), 2))) + theme_light() 
   return(p)
-  
 }
-
-
 
 ggplot(train, aes(x=LotArea, y=SalePrice)) + geom_point()
 result <- linearRegression()

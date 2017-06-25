@@ -9,3 +9,5 @@ This book is talking about machine learning concepts especially for software dev
 * Resources:
 
 1. http://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+2.
+https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html
