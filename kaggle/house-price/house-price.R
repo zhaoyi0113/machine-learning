@@ -35,12 +35,12 @@ test <- fread('../kaggle/house-price/data/test.csv' ,colClasses=c('MiscFeature' 
 
 
 linearRegression <- function() {
-  x <- train$LotArea
+  x <- train$OverallQual
   y <- train$SalePrice
-  relation <- lm(SalePrice ~ LotArea, data = train)
+  relation <- lm(SalePrice ~ OverallQual + YearBuilt + YearRemodAdd+TotalBsmtSF, data = train)
   result <- predict(relation, test)
   
-  plot(x, y , abline(lm(y ~ x)))
+  #plot(x, y , abline(lm(y ~ x)))
   return (result)
 }
 
@@ -98,6 +98,13 @@ exploreCorrelation <- function(train_cont){
   
   correlations<- correlations[row_indic ,row_indic ]
   corrplot(correlations, method="square")
+  
+  highcorr <- c(names(correlations[,'SalePrice'])[which(correlations[,'SalePrice'] > 0.5)], names(correlations[,'SalePrice'])[which(correlations[,'SalePrice'] < -0.2)])
+  
+  data_corr <- train[,highcorr, with = FALSE]
+  
+  
+  doPlots(data_corr, fun = plotCorr, ii = 1:6)
 }
 
 plot_Missing <- function(data_in, title = NULL){
@@ -125,6 +132,12 @@ doPlots <- function(data_in, fun, ii, ncol=3) {
   do.call("grid.arrange", c(pp, ncol=ncol))
 }
 
+plotCorr <- function(data_in, i){
+  data <- data.frame(x = data_in[[i]], SalePrice = data_in$SalePrice)
+  p <- ggplot(data, aes(x = x, y = SalePrice)) + geom_point(shape = 1, na.rm = TRUE) + geom_smooth(method = lm ) + xlab(paste0(colnames(data_in)[i], '\n', 'R-Squared: ', round(cor(data_in[[i]], data$SalePrice, use = 'complete.obs'), 2))) + theme_light()
+  return(suppressWarnings(p))
+}
+
 
 plotDen <- function(data_in, i){
   data <- data.frame(x=data_in[[i]], SalePrice = data_in$SalePrice)
@@ -136,7 +149,7 @@ plotDen <- function(data_in, i){
 ggplot(train, aes(x=LotArea, y=SalePrice)) + geom_point()
 result <- linearRegression()
 r <- data.frame(Id = test$Id, SalePrice = result)
-#write.csv(r, file="~/tmp/house-price.csv", row.names = FALSE)
+write.csv(r, file="~/tmp/house-price.csv", row.names = FALSE)
 
 plot_Missing(train[,colSums(is.na(train)) > 0, with=FALSE])
 # draw remoded hourse and non-remoded hourse
