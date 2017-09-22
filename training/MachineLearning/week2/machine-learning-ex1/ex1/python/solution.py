@@ -6,6 +6,9 @@ from sklearn.datasets.samples_generator import make_regression
 import pylab
 from scipy import stats
 
+def compute_cost_function(m, t0, t1, x, y):
+  return 1/2/m * sum([(t0 + t1* np.asarray([x[i]]) - y[i])**2 for i in range(m)])
+
 def gradient_descent(alpha, x, y, ep=0.0001, max_iter=1500):
     converged = False
     iter = 0
@@ -16,7 +19,7 @@ def gradient_descent(alpha, x, y, ep=0.0001, max_iter=1500):
     t1 = 0
 
     # total error, J(theta)
-    J = 1/2/m * sum([(t0 + t1* np.asarray([x[i]]) - y[i])**2 for i in range(m)])
+    J = compute_cost_function(m, t0, t1, x, y)
     print('J=', J);
     # Iterate Loop
     num_iter = 0
@@ -34,7 +37,7 @@ def gradient_descent(alpha, x, y, ep=0.0001, max_iter=1500):
         t1 = temp1
 
         # mean squared error
-        e = 1/2/m*sum( [ (t0 + t1*np.asarray([x[i]]) - y[i])**2 for i in range(m)] ) 
+        e = compute_cost_function(m, t0, t1, x, y)
         print ('J = ', e)
         J = e   # update error 
         iter += 1  # update iter
