@@ -5,6 +5,9 @@ import sklearn
 from sklearn.datasets.samples_generator import make_regression 
 import pylab
 from scipy import stats
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 
 def compute_cost_function(m, t0, t1, x, y):
   return 1/2/m * sum([(t0 + t1* np.asarray([x[i]]) - y[i])**2 for i in range(m)])
@@ -48,6 +51,18 @@ def gradient_descent(alpha, x, y, ep=0.0001, max_iter=1500):
 
     return t0,t1
 
+def plot_cost_function(x, y, m):
+    t0 = list(range(0, x.shape[0]))
+    j_values = []
+    for i in range(len(t0)):
+        j_values.append(compute_cost_function(m, i, i, x, y)[0])
+    print ('j_values', len(j_values), len(x), len(y))
+    fig = plt.figure()
+    ax = fig.gca(projection='3d')
+    ax.plot(x, y, j_values, label='parametric curve')
+    ax.legend()
+    plt.show()
+
 if __name__ == '__main__':
   
     # x, y = make_regression(n_samples=100, n_features=1, n_informative=1, 
@@ -63,6 +78,7 @@ if __name__ == '__main__':
     # call gredient decent, and get intercept(=theta0) and slope(=theta1)
     theta0, theta1 = gradient_descent(alpha, x, y, ep, max_iter=1500)
     print ('theta0 = ' + str(theta0)+' theta1 = '+str(theta1))
+    plot_cost_function(x, y, x.shape[0])
 
     # check with scipy linear regression 
     # slope, intercept, r_value, p_value, slope_std_error = stats.linregress(df.as_matrix(columns=df.columns[0:])[:,0], df['y'])
