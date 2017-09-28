@@ -5,8 +5,8 @@ from sklearn import  linear_model
 from sklearn.metrics import mean_squared_error, r2_score
 import pandas as pd
 
-df = pd.read_csv('../ex1data1.txt', names=['x','y'])
-x = pd.DataFrame(df, columns=['x'])
+df = pd.read_csv('../ex1data2.txt', names=['x','x2', 'y'])
+x = pd.DataFrame(df, columns=['x', 'x2']).as_matrix(columns=['x','x2'])
 y = pd.DataFrame(df, columns=['y'])
 # Create linear regression object
 regr = linear_model.LinearRegression()
