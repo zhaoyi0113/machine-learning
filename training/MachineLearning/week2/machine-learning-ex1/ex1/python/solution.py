@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 import random
-import sklearn
-from sklearn.datasets.samples_generator import make_regression 
+# import sklearn
+# from sklearn.datasets.samples_generator import make_regression 
 import pylab
 from scipy import stats
 from mpl_toolkits.mplot3d import Axes3D
@@ -78,7 +78,7 @@ if __name__ == '__main__':
     # call gredient decent, and get intercept(=theta0) and slope(=theta1)
     theta0, theta1 = gradient_descent(alpha, x, y, ep, max_iter=1500)
     print ('theta0 = ' + str(theta0)+' theta1 = '+str(theta1))
-    plot_cost_function(x, y, x.shape[0])
+    # plot_cost_function(x, y, x.shape[0])
 
     # check with scipy linear regression 
     # slope, intercept, r_value, p_value, slope_std_error = stats.linregress(df.as_matrix(columns=df.columns[0:])[:,0], df['y'])
