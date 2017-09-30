@@ -52,7 +52,7 @@ def corrPlot(df_train):
 
 def linearRegression(df, test):
   regr = linear_model.LinearRegression()
-  cols = ['SalePrice', 'OverallQual', 'GrLivArea', 'GarageCars', 'TotalBsmtSF', 'FullBath', 'YearBuilt']
+  cols = ['OverallQual', 'GrLivArea', 'GarageCars', 'TotalBsmtSF', 'FullBath', 'YearBuilt']
   x = pd.DataFrame(df, columns=cols).as_matrix(columns=cols)
   testX = pd.DataFrame(test, columns=cols).as_matrix(columns=cols)
   y = pd.DataFrame(df, columns=['SalePrice'])
