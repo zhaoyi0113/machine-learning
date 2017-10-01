@@ -85,6 +85,23 @@ def plotData(df_train):
   corrPlot(df_train)
   plt.show()
 
+def analyse_data(train):
+  numeric_features = train.select_dtypes(include=[np.number])
+  numeric_features.dtypes
+  # correlations
+  corr = numeric_features.corr()
+  print (corr['SalePrice'].sort_values(ascending=False)[:5], '\n')
+  print (corr['SalePrice'].sort_values(ascending=False)[-5:])
+  # The first five features are the most positively correlated with SalePrice, while the next five are the most negatively correlated.
+  train.OverallQual.unique()
+  quality_pivot = train.pivot_table(index='OverallQual',
+                                  values='SalePrice', aggfunc=np.median)
+  quality_pivot.plot(kind='bar', color='blue')
+  plt.xlabel('Overall Quality')
+  plt.ylabel('Median Sale Price')
+  plt.xticks(rotation=0)
+  plt.show()                                
+
 df_train = pd.read_csv('./data/train.csv')
 df_test = pd.read_csv('./data/test.csv');
 
