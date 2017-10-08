@@ -1,3 +1,5 @@
+# https://www.dataquest.io/blog/kaggle-getting-started/
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -88,6 +90,23 @@ plt.xlabel('Encoded Sale Condition')
 plt.ylabel('Median Sale Price')
 plt.xticks(rotation=0)
 
+# Alley
+def alleyEncode(x): return 1 if x == 'Pave' else 0
+train['alley_condition'] = train.Alley.apply(alleyEncode)
+test['alley_condition'] = test.Alley.apply(alleyEncode)
+
+# GarageFinish
+def GarageFinishEncode(x): 
+  if x == 'Fin': 
+    return 2 
+  elif x == 'RFn':
+    return 1
+  return 0
+
+train['GarageFinish_condition'] = train.GarageFinish.apply(GarageFinishEncode)
+test['GarageFinish_condition'] = test.GarageFinish.apply(GarageFinishEncode)
+
+
 data = train.select_dtypes(include=[np.number]).interpolate().dropna() 
 
 sum(data.isnull().sum() != 0)
@@ -133,5 +152,5 @@ print ("Final predictions are: \n", final_predictions[:5])
 submission['SalePrice'] = final_predictions
 submission.head()
 
-submission.to_csv('submission2.csv', index=False)
+submission.to_csv('data/submission2.csv', index=False)
 
