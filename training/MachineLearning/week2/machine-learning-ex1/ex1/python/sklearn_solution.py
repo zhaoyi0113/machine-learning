@@ -17,7 +17,7 @@ regr.fit(x, y)
 # Make predictions using the testing set
 y_pred = regr.predict(x)
 
-print('y pred', y_pred);
+print('y pred', y_pred)
 plt.scatter(x, y,  color='black')
 plt.plot(x, y_pred, color='blue', linewidth=3)
 plt.show()
