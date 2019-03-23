@@ -1,3 +1,4 @@
 {
-  "r.lintr.enabled": false
+  "r.lintr.enabled": false,
+  "python.jediEnabled": false
 }
