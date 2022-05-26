@@ -133,7 +133,7 @@ SQLAlchemy==1.1.5
 statsmodels==0.6.1
 sympy==1.0
 tables==3.3.0
-tensorflow==1.12.2
+tensorflow==2.7.2
 terminado==0.6
 Theano==0.8.2
 toolz==0.8.2
