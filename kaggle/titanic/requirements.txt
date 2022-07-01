@@ -80,7 +80,7 @@ numexpr==2.6.1
 numpy==1.12.1
 numpydoc==0.6.0
 odo==0.5.0
-openpyxl==2.4.1
+openpyxl==2.4.2
 packaging==16.8
 pandas==0.19.2
 partd==0.3.7
